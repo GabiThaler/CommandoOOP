@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CommandoOOP.model
 {
-    internal class SeaCommando:Commando
+    public class SeaCommando:Commando
     {
-        private int TimeInWater;
+        public int TimeInWater;
 
         public SeaCommando(string name, string codeName, string status,int timeInWater):base(name,codeName,status)
         {
@@ -26,9 +26,9 @@ namespace CommandoOOP.model
                 Console.WriteLine("not alod in to aeter");
             }
         }
-        public override void Attack()
+        public override void Attack(Enemy e)
         {
-            Console.WriteLine($"seaCommando {getcodname("GENERAL")} is attaking");
+            Console.WriteLine($"seaCommando {getcodname("GENERAL")} is attaking {e.GetName}");
         }
     }
 }
