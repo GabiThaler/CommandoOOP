@@ -25,10 +25,7 @@ namespace CommandoOOP
             Commando[] ArryCommondo = new Commando[] {A1,s1,c1};
             
 
-            foreach (Commando ccc in ArryCommondo)
-            {
-                ccc.Attack();
-            }
+            
 
 
 

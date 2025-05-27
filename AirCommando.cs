@@ -28,9 +28,9 @@ namespace CommandoOOP.CommandoOOP.model
                 Console.WriteLine("to high to drop");
             }
         }
-        public override void Attack()
+        public override void Attack(Enemy e)
         {
-            Console.WriteLine($"AirCommando {getcodname("GENERAL")} is attaking");
+            Console.WriteLine($"AirCommando {getcodname("GENERAL")} is attaking {e.GetName}");
         }
     }
 }

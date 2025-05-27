@@ -1,59 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Microsoft.VisualStudio.DebuggerVisualizers;
+using System.Security.Cryptography.X509Certificates;
 
-namespace CommandoOOP
+
+namespace CommandoOOP.model
 {
-    // TODO: Add the following to SomeType's definition to see this visualizer when debugging instances of SomeType:
-    // 
-    //  [DebuggerVisualizer(typeof(Enemy))]
-    //  [Serializable]
-    //  public class SomeType
-    //  {
-    //   ...
-    //  }
-    // 
-    /// <summary>
-    /// A Visualizer for SomeType.  
-    /// </summary>
-    public class Enemy : DialogDebuggerVisualizer
+    
+    public class Enemy 
     {
-        protected override void Show(IDialogVisualizerService windowService, IVisualizerObjectProvider objectProvider)
+        private string Name { get; }
+        private int Life = 100;
+        private string status = "a live";
+
+
+        public Enemy (string name)
         {
-            if (windowService == null)
-                throw new ArgumentNullException("windowService");
-            if (objectProvider == null)
-                throw new ArgumentNullException("objectProvider");
-
-            // TODO: Get the object to display a visualizer for.
-            //       Cast the result of objectProvider.GetObject() 
-            //       to the type of the object being visualized.
-            object data = (object)objectProvider.GetObject();
-
-            // TODO: Display your view of the object.
-            //       Replace displayForm with your own custom Form or Control.
-            using (Form displayForm = new Form())
-            {
-                displayForm.Text = data.ToString();
-                windowService.ShowDialog(displayForm);
-            }
+            Name = name;
         }
 
-        // TODO: Add the following to your testing code to test the visualizer:
-        // 
-        //    Enemy.TestShowVisualizer(new SomeType());
-        // 
-        /// <summary>
-        /// Tests the visualizer by hosting it outside of the debugger.
-        /// </summary>
-        /// <param name="objectToVisualize">The object to display in the visualizer.</param>
-        public static void TestShowVisualizer(object objectToVisualize)
+        public string GetName()
         {
-            VisualizerDevelopmentHost visualizerHost = new VisualizerDevelopmentHost(objectToVisualize, typeof(Enemy));
-            visualizerHost.ShowVisualizer();
+            return Name;
+        }
+
+        public void shout()
+        {
+            Console.WriteLine("I am an anemy!!!!!!!!!!!!");
         }
     }
 }
