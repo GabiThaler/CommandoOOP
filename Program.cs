@@ -8,7 +8,7 @@ namespace CommandoOOP
     {
         static void Main()
         {
-            //Commando c1 = new Commando("gabi", "gaga", "waking");
+            
             //c1.Attack();
             //c1.Walk();
             //c1.Hide();
@@ -19,12 +19,17 @@ namespace CommandoOOP
             //Console.WriteLine(c1.getcodname("GENERAL"));
             //c1.setCodeName("gttttt", "omo");
             //Console.WriteLine(c1.getcodname("GENERAL"));
-            //AirCommando A1 = new AirCommando("neta", "nnn", "grfsd", 7777);
-            //A1.drop(45);
-            //A1.drop(4556543);
+            AirCommando A1 = new AirCommando("neta", "nnn", "grfsd", 7777);
             SeaCommando s1 = new SeaCommando("gabi", "efvds", "hinjrwenv", 44);
-            s1.GoInToWater(33);
-            s1.GoInToWater(33343);
+            Commando c1 = new Commando("gabi", "gaga", "waking");
+            Commando[] ArryCommondo = new Commando[] {A1,s1,c1};
+            
+
+            foreach (Commando ccc in ArryCommondo)
+            {
+                ccc.Attack();
+            }
+
 
 
         }

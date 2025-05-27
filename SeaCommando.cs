@@ -26,5 +26,9 @@ namespace CommandoOOP.model
                 Console.WriteLine("not alod in to aeter");
             }
         }
+        public override void Attack()
+        {
+            Console.WriteLine($"seaCommando {getcodname("GENERAL")} is attaking");
+        }
     }
 }

@@ -66,7 +66,7 @@ namespace CommandoOOP.model
             Status = "hiding";
         }
 
-        public void Attack()
+        public virtual void Attack()
         {
             Console.WriteLine($"commando {CodeName} is attackimg!");
         }
