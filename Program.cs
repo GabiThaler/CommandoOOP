@@ -19,9 +19,12 @@ namespace CommandoOOP
             //Console.WriteLine(c1.getcodname("GENERAL"));
             //c1.setCodeName("gttttt", "omo");
             //Console.WriteLine(c1.getcodname("GENERAL"));
-            AirCommando A1 = new AirCommando("neta", "nnn", "grfsd", 7777);
-            A1.drop(45);
-            A1.drop(4556543);
+            //AirCommando A1 = new AirCommando("neta", "nnn", "grfsd", 7777);
+            //A1.drop(45);
+            //A1.drop(4556543);
+            SeaCommando s1 = new SeaCommando("gabi", "efvds", "hinjrwenv", 44);
+            s1.GoInToWater(33);
+            s1.GoInToWater(33343);
 
 
         }
