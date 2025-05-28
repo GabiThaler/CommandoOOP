@@ -26,5 +26,11 @@ namespace CommandoOOP.model
         {
             Console.WriteLine("I am an anemy!!!!!!!!!!!!");
         }
+        
+        public void ataacet()
+        {
+            Life -= 1;
+            Console.WriteLine("wowowowowowowwjohwwowhowhwohwoh");
+        }
     }
 }

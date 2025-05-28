@@ -10,17 +10,33 @@ namespace CommandoOOP
     public class WeaponFactory
     {
 
-        private List<Weapon> Lweapons = new List<Weapon>();
-        string[] name = new string[] { "m16", "mag4", "4om", "sadf" };
-        string[] brandName = new string[] { "ads", "dasf", "dasdv", "dasf" };
+        private List<Weapon> weapons = new List<Weapon>();
+       
+
         Random rnd = new Random();
-        public void CreatWeapn(int amount)
+        public void CreatWeapn(int amount, string type)
         {
-            for (int i = 0; i < amount; i++)
+            if (type.ToLower() == "M16")
             {
-                Lweapons.Add(new Weapon(name[rnd.Next(0, name.Length)], brandName[rnd.Next(0, brandName.Length)], 100));
+                for (int i = 0; i < amount; i++)
+                {
+                    weapons.Add(new Weapon("M16", "COLT", 29));
+                }
+            }
+            else if (type.ToLower() == "AK47")
+            {
+                for (int i = 0; i < amount; i++)
+                {
+                    weapons.Add(new Weapon("AK47","KALASHNIKVOV", 30));
+                }
             }
         }
 
+        public List<Weapon> GetWeapans()
+        {
+            return weapons;
+        }
+
+ 
     }
 }

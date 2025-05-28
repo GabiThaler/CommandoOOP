@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CommandoOOP.CommandoOOP.model;
 using CommandoOOP.model;
 
-namespace CommandoOOP
+namespace CommandoOOP.model
 {
     
     public class CommandoFactory
