@@ -10,16 +10,26 @@ namespace CommandoOOP.model
     internal class Game
     {
         CommandoFactory CF = new CommandoFactory();
-        EnemyFactory EaF = new EnemyFactory();
+        EnemyFactory EF = new EnemyFactory();
         WeaponFactory WF = new WeaponFactory();
-        List<string> mamss = new List<string>() { "dsg", "sag", "eagsr", "egsfdg", "wfegfd", "wqefgd", "weqr", "ewdfs" };
-        List<Commando> commandos =new List <Commando>() ;
+        List<Enemy> Enemys = new List<Enemy>();
+        List<Weapon> Weapens = new List<Weapon>() ;
+        List<Commando> Commandos =new List <Commando>() ;
         public void StartGame()
         {
+            
+
             CF.creatCommando(100);
-            EaF.CreateEnemy(mamss, 55);
-            WF.CreatWeapn(15);
-            commandos = CF.GetListCommando();
+            EF.CreateEnemy( 55);
+            WF.CreatWeapn(35,"M16");
+            WF.CreatWeapn(35, "AK47");
+            Commandos = CF.GetListCommando();
+            Enemys = EF.GetListEnemy();
+            Weapens = WF.GetWeapans();
+            Commandos[4].Walk();
+            Commandos[2].Hide();
+            Commandos[5].Attack(Enemys[3]);
+            
           
           
 

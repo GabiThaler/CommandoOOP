@@ -68,7 +68,8 @@ namespace CommandoOOP.model
 
         public virtual void Attack(Enemy e)
         {
-            Console.WriteLine($"commando {CodeName} is attackimg! {e.GetName}");
+            Console.WriteLine($"commando {CodeName} is attackimg! {e.GetName()}");
+            e.ataacet();
         }
     }
 }
