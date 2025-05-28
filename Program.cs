@@ -23,10 +23,8 @@ namespace CommandoOOP
             SeaCommando s1 = new SeaCommando("gabi", "efvds", "hinjrwenv", 44);
             Commando c1 = new Commando("gabi", "gaga", "waking");
             Commando[] ArryCommondo = new Commando[] {A1,s1,c1};
+            Game gg = new Game();
             
-
-            
-
 
 
         }

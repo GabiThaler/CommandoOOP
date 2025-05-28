@@ -17,7 +17,7 @@ namespace CommandoOOP
         string[] Names = new string[] { "af", "wegsa", "egwa", "wages", "wagetsnhrgbf", "wegasd", "ares", "wefagshtnd", "efwasrtnd" };
         string[] Codnams = new string[] { "DFAsgzdFX", "waesgd", "wqASFD", "asfd", "qASD", "asd", "qwes", "wqefgd", "QAWDSF", "QWEFD", "QWDSF" };
         string[] Statuss = new string[] { "alive", "ded" };
-        public void createCommando(string type ,string name ,string codeName,string status,int timeInWater,int heightToDrop)
+        public void createCommando1(string type ,string name ,string codeName,string status,int timeInWater,int heightToDrop)
         {
             switch (type)
             {
@@ -39,12 +39,17 @@ namespace CommandoOOP
             }
            
         }
-        public void creat100Com()
+        public void creatCommando(int amount)
         {
-            for (int i=0; i<100;i++)
+            for (int i=0; i<amount;i++)
             {
-                createCommando(types[rnd.Next(0, 2)], Names[rnd.Next(0, Names.Length - 1)], Codnams[rnd.Next(0, Codnams.Length - 1)], Statuss[rnd.Next(0, 1)], rnd.Next(0, 60), rnd.Next(0, 30000));
+                createCommando1(types[rnd.Next(0, 2)], Names[rnd.Next(0, Names.Length - 1)], Codnams[rnd.Next(0, Codnams.Length - 1)], Statuss[rnd.Next(0, 1)], rnd.Next(0, 60), rnd.Next(0, 30000));
             }
+        }
+
+        public List <Commando> GetListCommando()
+        {
+            return LCommando;
         }
         
         
